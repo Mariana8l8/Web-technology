@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+html {
+    --pink: #c53058;
+    --teal: #037a76;
+    --black: #050304;
+}
+
+html, body {
+    height: 100%;
+    position: relative;
+    font-family: "ZCOOL QingKe HuangYou", sans-serif;
+}
+
+.main {
+    background-color: var(--black);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.field {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    bottom: 40px;
+    left: 40px;
+    background-image: url("images/field-bg.png");
+    background-size: contain;
+    display: flex;
+    border: 5px solid var(--pink);
+}
+
+.defeat, .victory {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #050304c0;
+    justify-content: center;
+    align-items: center;
+    color: var(--pink);
+    font-size: 50px;
+    display: none;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.defeat.active, .victory.active {
+    display: flex;
+}
+
+.field-doll-part {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.field-doll-part > div {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.field-player-part {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.timer {
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+    position: absolute;
+    top: 25px;
+    background-color: var(--black);
+    color: var(--pink);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.doll-container {
+    height: 450px;
+    width: 254px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.doll-inner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+}
+
+.doll-inner.flipped {
+    transform: rotateY(180deg);
+}
+
+.doll {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+}
+
+.front, .back {
+    backface-visibility: hidden;
+}
+
+.doll.back {
+    transform: rotateY(180deg);
+}
+
+.finish-line {
+    height: 100%;
+}
+
+.player {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--teal);
+    margin-left: 10px;
+    z-index: 1;
+    /* transition: all 0.1s ease; */
+}
+
+.play-again-btn {
+    margin-top: 20px;
+    border-radius: 25px;
+    padding: 12.5px 25px;
+    font-size: 25px;
+    border-width: 0;
+    background-color: var(--pink);
+    color: var(--black);
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.play-again-btn:hover {
+    filter: brightness(90%);
+}
+
+.play-again-btn:active {
+    filter: brightness(110%);
+}

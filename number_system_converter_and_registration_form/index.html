@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Number system converter</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="left-container">
+            <div class="left-container-header">
+                <h2>Main Number Systems</h2>
+            </div>
+            <div class="left-container-content">
+                <h4>Decimal (Base 10) System</h4>
+                <br />
+                <ul>
+                    <li>Uses digits: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9.</li>
+                    <li>The most commonly used system in daily life.</li>
+                </ul>
+                <br />
+                <h4>Binary (Base 2) System</h4>
+                <br />
+                <ul>
+                    <li>Uses only two digits: 0 and 1.</li>
+                    <li>The primary number system used in computers.</li>
+                </ul>
+                <br />
+                <h4>Octal (Base 8) System</h4>
+                <br />
+                <ul>
+                    <li>Uses digits: 0, 1, 2, 3, 4, 5, 6, 7.</li>
+                    <li>Applied in programming and electronics.</li>
+                </ul>
+                <br />
+                <h4>Hexadecimal (Base 16) System</h4>
+                <br />
+                <ul>
+                    <li>
+                        Uses digits: 0-9and letters A, B, C, D, E, F (where A =
+                        10, B = 11, etc.).
+                    </li>
+                    <li>
+                        Widely used in programming, especially for color
+                        representation, memory addresses, and more.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <main>
+            <div class="main-text-container">
+                <h2>Welcome to number system converter!</h2>
+                <h4>
+                    This online service converts a number from one
+                    <em>number system</em> to another. The number can be any
+                    non-negative number. The base of the
+                    <em>number system</em> is from 2 to 16 inclusive. In the
+                    converter form, enter the number and indicate which
+                    <em>number system</em> it is in, then indicate the
+                    <em>number system</em> to which you want to convert the
+                    number and click <em>"Calculate"</em>.
+                </h4>
+            </div>
+            <div class="main-converter-container">
+                <h4>
+                    Choose from which number system you want to convert the
+                    number.
+                </h4>
+                <form>
+                    <select
+                        class="from-number-system"
+                        name="from-number-system"
+                    >
+                        <option value="10" selected>Decimal System</option>
+                        <option value="2">Binary System</option>
+                        <option value="8">Octal System</option>
+                        <option value="16">Hexadecimal System</option>
+                    </select>
+                    <img
+                        class="rotate-img"
+                        src="images/rotate_white.png"
+                        alt="rotate"
+                    />
+                    <select class="to-number-system" name="to-number-system">
+                        <option value="10">Decimal System</option>
+                        <option value="2">Binary System</option>
+                        <option value="8">Octal System</option>
+                        <option value="16" selected>Hexadecimal System</option>
+                    </select>
+                </form>
+                <h4>Enter a number in the original number system:</h4>
+                <div class="input-and-result-container">
+                    <label for="input-text">Number:</label>
+                    <input id="input-text" type="text" name="Number" />
+                    <img
+                        class="main-container-arrow-img"
+                        src="images/arrow.png"
+                        alt="right-arrow"
+                    />
+                    <input
+                        type="text"
+                        name="result"
+                        id="input-result"
+                        placeholder="Result"
+                        readonly
+                    />
+                </div>
+                <div>
+                    <button class="button-calc" type="submit">Calculate</button>
+                    <button class="button-clear" type="reset">Clear</button>
+                </div>
+            </div>
+        </main>
+        <div class="right-container">
+            <div class="right-container-header">
+                <h2>Number System Converter</h2>
+            </div>
+            <div class="right-container-content">
+                <h2>Converting Between Number Systems</h2>
+                <br />
+                <h4>
+                    Various methods are used to convert a number from one system
+                    to another, including:
+                </h4>
+                <br />
+                <ul>
+                    <li>
+                        Division by base – to convert from the decimal system to
+                        another.
+                    </li>
+                    <li>
+                        Expansion by powers of the base – to convert from
+                        another system to decimal.
+                    </li>
+                </ul>
+                <br />
+                <h4>Example: Converting the decimal number 25 to binary:</h4>
+                <br />
+                <ul>
+                    <li>25 ÷ 2 = 12 (remainder 1)</li>
+                    <li>12 ÷ 2 = 6 (remainder 0)</li>
+                    <li>6 ÷ 2 = 3 (remainder 0)</li>
+                    <li>3 ÷ 2 = 1 (remainder 1)</li>
+                    <li>1 ÷ 2 = 0 (remainder 1)</li>
+                </ul>
+                <br />
+                <h4>
+                    Reading the remainders from bottom to top: 25₁₀ = 11001₂
+                </h4>
+                <br />
+                <p>
+                    Understanding these concepts helps in working with numbers
+                    in different number systems, which is essential for
+                    programming and computing.
+                </p>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

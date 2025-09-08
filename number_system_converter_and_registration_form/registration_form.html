@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма реєстрації</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+</head>
+
+<body class="registration-form">
+    <div class="form-container">
+        <h2 class="registration">Реєстрація / Вхід</h2>
+
+        <!-- <form id="authForm"> -->
+            <input class="registration-form-input" type="text" id="username" placeholder="Username" required>
+            <input class="registration-form-input" type="password" id="password" placeholder="Password" required>
+
+            <button type="submit" class="registration-form-button" onclick="register(event)">Зареєструватися</button>
+            <button type="submit" class="registration-form-button" onclick="signIn(event)">Увійти</button>
+        <!-- </form> -->
+        <!-- <input class="registration-form-input" type="text" id="username" placeholder="Username">
+            <input class="registration-form-input" type="password" id="password" placeholder="Password">
+            <button class="registration-form-button" onclick="register()">Зареєструватися</button>
+            <button class="registration-form-button" onclick="signIn()">Увійти</button> -->
+
+        <div class="message" id="message"></div>
+    </div>
+</body>
+
+</html>
