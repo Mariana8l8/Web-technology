@@ -99,3 +99,8 @@ function signIn() {
         }
     }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("authForm");
+  form.addEventListener("submit", (e) => e.preventDefault());
+});

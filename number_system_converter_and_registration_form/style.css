@@ -331,6 +331,12 @@ main {
     width: 300px;
 }
 
+#authForm {
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+}
+
 .registration {
     text-align: center;
     margin-bottom: 15px;
