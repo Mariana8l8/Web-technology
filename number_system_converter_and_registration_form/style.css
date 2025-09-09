@@ -350,6 +350,13 @@ main {
     border-radius: 4px;
 }
 
+.registration-form-input-select {
+    width: 282px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #333;
+}
+
 .registration-form-button {
     width: 100%;
     padding: 10px;

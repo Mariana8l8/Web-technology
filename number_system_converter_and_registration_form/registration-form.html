@@ -16,23 +16,23 @@
         <form id="authForm">
             <input class="registration-form-input" type="text" id="username" placeholder="Username" required>
             <input class="registration-form-input" type="password" id="password" placeholder="Password" required>
-            <input class="registration-form-input" type="email" id="regEmail" placeholder="Email" required>
-            <input class="registration-form-input" type="number" id="regAge" placeholder="Вік" min="1" required>
+            <input class="registration-form-input" type="email" placeholder="Email" required>
+            <input class="registration-form-input" type="number" placeholder="Вік" min="18" required>
 
 
-            <input class="registration-form-input" type="date" id="regBirthday" required>
+            <input class="registration-form-input" type="date" max="2007-09-09" min="1925-09-09"
+                required>
 
 
-            <select class="registration-form-input" id="regGender" required>
+            <select class="registration-form-input-select" required>
                 <option value="" disabled selected>Оберіть стать</option>
                 <option value="male">Чоловіча</option>
                 <option value="female">Жіноча</option>
                 <option value="other">Інша</option>
             </select>
 
-            <button type="submit" class="registration-form-button"
-                onclick="register(event)">Зареєструватися</button>
-            <button type="submit" class="registration-form-button" onclick="signIn(event)">Увійти</button>
+            <button type="submit" class="registration-form-button" onclick="register(event)">Зареєструватися</button>
+            <button type="submit" class="registration-form-button" onclick="window.location.href='sign-in.html'">Увійти</button>
         </form>
         <div class="message" id="message"></div>
     </div>

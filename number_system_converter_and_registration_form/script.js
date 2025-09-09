@@ -50,11 +50,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-let users = {
-    "admin": "1234",
-    "mariana": "aaaa"
-};
-
 function register() {
     const username = document.getElementById("username").value.trim();
     const password = document.getElementById("password").value.trim();
@@ -65,17 +60,16 @@ function register() {
         return;
     }
 
-    if (users[username]) {
+    if (localStorage.getItem(username,password)) {
         message.textContent = "Такий користувач вже існує!";
     } else {
-        users[username] = password;
+        localStorage.setItem(username, password);
         message.textContent = `Користувач "${username}" зареєстрований!`;
-        console.log("Усі користувачі:", users);
+        setTimeout(() => {
+            window.location.href = "sign-in.html";
+        }, 1500);
     }
 
-    setTimeout(() => {
-        window.location.href = "sign-in.html";
-    }, 1500);
 }
 
 function signIn() {
@@ -88,11 +82,11 @@ function signIn() {
         return;
     }
 
-    if (!users[username]) {
+    if (!localStorage.getItem(username, password)) {
         message.textContent = "Такого користувача не існує!";
     }
     else {
-        if (users[username] === password) {
+        if (localStorage.getItem(username, password) == password) {
             window.location.href = "index.html";
         }
         else {
@@ -103,5 +97,6 @@ function signIn() {
 
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("authForm");
+    const formRegistration = document.getElementById("authFormReg");
     form.addEventListener("submit", (e) => e.preventDefault());
 });
