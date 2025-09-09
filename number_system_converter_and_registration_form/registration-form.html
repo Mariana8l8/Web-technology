@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+</head>
+
+<body class="registration-form">
+    <div class="form-container">
+        <h2 class="registration">Реєстрація</h2>
+
+        <form id="authForm">
+            <input class="registration-form-input" type="text" id="username" placeholder="Username" required>
+            <input class="registration-form-input" type="password" id="password" placeholder="Password" required>
+            <input class="registration-form-input" type="email" id="regEmail" placeholder="Email" required>
+            <input class="registration-form-input" type="number" id="regAge" placeholder="Вік" min="1" required>
+
+
+            <input class="registration-form-input" type="date" id="regBirthday" required>
+
+
+            <select class="registration-form-input" id="regGender" required>
+                <option value="" disabled selected>Оберіть стать</option>
+                <option value="male">Чоловіча</option>
+                <option value="female">Жіноча</option>
+                <option value="other">Інша</option>
+            </select>
+
+            <button type="submit" class="registration-form-button"
+                onclick="register(event)">Зареєструватися</button>
+            <button type="submit" class="registration-form-button" onclick="signIn(event)">Увійти</button>
+        </form>
+        <div class="message" id="message"></div>
+    </div>
+</body>
+
+</html>

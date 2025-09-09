@@ -150,7 +150,6 @@ html, body {
     background-color: var(--teal);
     margin-left: 10px;
     z-index: 1;
-    /* transition: all 0.1s ease; */
 }
 
 .play-again-btn {

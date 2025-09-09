@@ -35,19 +35,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     buttonCalc.addEventListener("click", function (event) {
-        event.preventDefault();
         convertNumber();
     });
 
     inputField.addEventListener("keydown", function (event) {
         if (event.key === "Enter") {
-            event.preventDefault();
             convertNumber();
         }
     });
 
     buttonClear.addEventListener("click", function (event) {
-        event.preventDefault();
         inputField.value = "";
         document.getElementById("input-result").value = "";
     });
@@ -55,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 let users = {
     "admin": "1234",
-    "mariana": "qwerty"
+    "mariana": "aaaa"
 };
 
 function register() {
@@ -75,6 +72,10 @@ function register() {
         message.textContent = `Користувач "${username}" зареєстрований!`;
         console.log("Усі користувачі:", users);
     }
+
+    setTimeout(() => {
+        window.location.href = "sign-in.html";
+    }, 1500);
 }
 
 function signIn() {
@@ -93,7 +94,7 @@ function signIn() {
     else {
         if (users[username] === password) {
             window.location.href = "index.html";
-        } 
+        }
         else {
             message.textContent = "Невірний пароль!";
         }
@@ -101,6 +102,6 @@ function signIn() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("authForm");
-  form.addEventListener("submit", (e) => e.preventDefault());
+    const form = document.getElementById("authForm");
+    form.addEventListener("submit", (e) => e.preventDefault());
 });
